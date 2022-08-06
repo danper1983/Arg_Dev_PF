@@ -1,9 +1,12 @@
 div{
     background-color: #5aa1a1;
-    
+    padding: 1%;
 }
 #imagen_fondo{
+    top: 600px;
     width: 100%;
     aspect-ratio: 2;
     height: auto;
+    background-color: transparent;
+    background-image: -moz-linear-gradient();
 }

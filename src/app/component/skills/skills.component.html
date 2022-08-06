@@ -1,1 +1,31 @@
-<p>skills works!</p>
+<h2>Hard & Soft Skills</h2>
+<div class="row">
+    <div class="col -sm-4 col -md-4 col -lg-4">
+        <circle-progress 
+            [percent]="55" 
+            [radius]="80" 
+            [outerStrokeWidth]="16" 
+            [innerStrokeWidth]="8"
+            [outerStrokeColor]="'#78C000'" 
+            [innerStrokeColor]="'#C7E596'" 
+            [animation]="true" 
+            [animationDuration]="1200">
+        </circle-progress>
+    </div>
+    <div class="col -sm-4 col -md-4 col -lg-4">
+        <circle-progress 
+            [percent]="55" 
+            [radius]="80"
+            [showImage]=true
+            [imageSrc]="'../../../assets/github.png'"
+            [imageWidth]="80"
+            [imageHeight]="80" 
+            [outerStrokeWidth]="16" 
+            [innerStrokeWidth]="8"
+            [outerStrokeColor]="'#78C000'" 
+            [innerStrokeColor]="'#C7E596'" 
+            [animation]="true" 
+            [animationDuration]="1200">
+        </circle-progress>
+    </div>
+</div>

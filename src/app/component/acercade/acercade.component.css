@@ -1,0 +1,14 @@
+.row{
+    padding-top: 20px;
+    padding-left: 10px;
+}
+div{
+    background-color: beige;
+    text-rendering: auto;
+}
+#nombre{
+align-content: space-between;
+}
+#descripcion{
+align-content: flex-start;
+}

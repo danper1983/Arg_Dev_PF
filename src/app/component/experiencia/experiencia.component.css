@@ -1,0 +1,14 @@
+.row{
+    padding: 30px;
+    background-color: rgb(230, 215, 215);
+}
+#trabajo{
+    padding: 10px;
+    padding-left: inherit;
+}
+#itemList{
+    padding-top: 5px;
+}
+h1, h2, h3{
+    display: inline;
+}

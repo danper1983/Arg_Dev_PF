@@ -12,6 +12,7 @@ import { EducacionComponent } from './component/educacion/educacion.component';
 import { SkillsComponent } from './component/skills/skills.component';
 import { ProyectosComponent } from './component/proyectos/proyectos.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,17 @@ import { FooterComponent } from './component/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+        // Specify ng-circle-progress as an import
+        NgCircleProgressModule.forRoot({
+          // set defaults here
+          radius: 100,
+          outerStrokeWidth: 16,
+          innerStrokeWidth: 8,
+          outerStrokeColor: "#78C000",
+          innerStrokeColor: "#C7E596",
+          animationDuration: 300,
+        })
   ],
   providers: [],
   bootstrap: [AppComponent]

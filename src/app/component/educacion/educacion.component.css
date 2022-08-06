@@ -1,0 +1,7 @@
+.row{
+    padding: 30px;
+    background-color: rgba(236, 233, 233, 0.87);
+}
+h1, h2, h3{
+    display: inline;
+}
