@@ -13,6 +13,12 @@ import { SkillsComponent } from './component/skills/skills.component';
 import { ProyectosComponent } from './component/proyectos/proyectos.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { HomeComponent } from './component/home/home.component';
+import { LoginComponent } from './component/login/login.component';
+import { interceptorProvider } from './service/interceptor-service';
+import { FormsModule } from '@angular/forms';
+import { NewExperienciaComponent } from './component/experiencia/new-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -25,10 +31,15 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     EducacionComponent,
     SkillsComponent,
     ProyectosComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    LoginComponent,
+    NewExperienciaComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
     AppRoutingModule,
         // Specify ng-circle-progress as an import
         NgCircleProgressModule.forRoot({
@@ -40,8 +51,10 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
           innerStrokeColor: "#C7E596",
           animationDuration: 300,
         })
+    ],
+  providers: [
+    interceptorProvider
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

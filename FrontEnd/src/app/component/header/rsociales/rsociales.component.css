@@ -2,6 +2,9 @@
     width: 55px;
     float: right;
     flex-flow: column;
-    margin-top: 35px;
+    margin-top: 20px;
     padding-inline: 10px;
+}
+class btn_login{
+
 }
