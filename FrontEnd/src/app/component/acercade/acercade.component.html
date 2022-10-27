@@ -1,6 +1,13 @@
 <div class="container-fluid">
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-secondary" routerLink="/editacercade/id" *ngIf="isLogged">
+            EDITAR
+        </button>
+    </div>
+    
+    
     <div class="row">
-        <img src="" class="img-fluid" id="foto_perfil">
+    <img src={{persona.img}} class="img-fluid" id="foto_perfil">
     </div>
     <div id="nombre">
         <h2 id="nombre">{{persona.nombre}} {{persona.apellido}}</h2>
@@ -10,9 +17,7 @@
     <div col="*-*" id="descripcion">
         <span>
             <h2>Acerca de mí</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga eligendi minus maiores odit, esse ipsa
-                eveniet nobis repellat deleniti suscipit? Ipsa alias itaque ducimus modi quod asperiores dolor
-                dignissimos quam?</p>
+            <p>{{persona.descripcion}</p>
         </span>
     </div>
 </div>

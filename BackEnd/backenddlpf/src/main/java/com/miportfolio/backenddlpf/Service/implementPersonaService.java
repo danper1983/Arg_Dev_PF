@@ -1,40 +1,48 @@
 package com.miportfolio.backenddlpf.Service;
 
 import com.miportfolio.backenddlpf.Entity.Persona;
-import com.miportfolio.backenddlpf.Interface.IPersonaService;
 import com.miportfolio.backenddlpf.Repository.IPersonaRepository;
 import java.util.List;
 import java.util.Optional;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
-public class implementPersonaService implements IPersonaService {
-    @Autowired //conexion a clase repositorio donde está la conexion JPA.
-        public IPersonaRepository iPersonaRepository;
-    
-    @Override
-    public List<Persona> getPersona() {
-        //List<Persona> persona = iPersonaRepository.findAll();
-        //return persona;
-        return iPersonaRepository.findAll();
-    }
 
-    @Override
-    public void savePersona(Persona persona) {
+@Service
+@Transactional
+public class implementPersonaService {
+
+    @Autowired //conexion a clase repositorio donde está la conexion JPA.
+    public IPersonaRepository iPersonaRepository;
+
+    public List<Persona> list(){
+       return iPersonaRepository.findAll();
+    }
+    
+    public Optional<Persona> getOne(int id){
+        return iPersonaRepository.findById(id);
+    }
+    
+    public Optional<Persona> getByNombre(String nombre){
+        return iPersonaRepository.findByNombre(nombre);
+    }
+    
+    public void save(Persona persona){
         iPersonaRepository.save(persona);
     }
-
-    @Override
-    public void deletePersona(Long id) {
+    
+    public void delete(int id){
         iPersonaRepository.deleteById(id);
     }
-
-    @Override
-    public Persona findPersona(Long id) {
-        //Persona persona = iPersonaRepository.findById(id).orElse(null);
-        //return persona;
-        return iPersonaRepository.findById(id).orElse(null);
+    
+    public boolean existById(int id){
+        return iPersonaRepository.existsById(id);
+    } 
+    
+    public boolean existByNombre (String nombre){
+        return iPersonaRepository.existByNombre(nombre);
     }
     
+
 }

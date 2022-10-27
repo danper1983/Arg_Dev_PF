@@ -25,9 +25,25 @@ public class Persona {
     @Size(min = 1 , max = 50, message = "No cumple con la longuitud")
     private String apellido;
     
-    @Size(min = 1 , max = 50, message = "No cumple con la longuitud")
+    @NotNull
+    private String descripcionP;
+    
     private String img;
 
+    //Constructor
+
+    public Persona() {
+    }
+
+    public Persona(int id, String nombre, String apellido, String descripcionP, String img) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.descripcionP = descripcionP;
+        this.img = img;
+    }
+    
+    //G&S
     public int getId() {
         return id;
     }
@@ -60,5 +76,11 @@ public class Persona {
         this.img = img;
     }
 
+    public String getDescripionP() {
+        return descripcionP;
+    }
 
+    public void setDescripcionP(String descripcionP) {
+        this.descripcionP = descripcionP;
+    }
 }
